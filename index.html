@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <title>CRUD System</title>
+</head>
+<body>
+
+
+   <div class="container py-5 bg-dark">
+    <div class="form-floating  mb-3">
+        <input type="text" class="form-control " id="ProductName" placeholder="Product Name">
+        <label for="ProductName">Product Name</label>
+      </div>
+
+      <div class="form-floating  mb-3">
+        <input type="text" class="form-control " id="ProductPrice" placeholder="Product Price">
+        <label for="ProductPrice">Product Price</label>
+      </div>
+
+
+      <div class="form-floating  mb-3">
+        <input list="category"  type="text" class="form-control " id="ProductCategory" placeholder="Product Category">
+        <label for="ProductCategory">Product Category</label>
+      </div>
+      <datalist id="category">
+       <option value="Mobile">
+        <option value="TV">
+        <option value="Screens">
+        <option value="Electronics">
+      </datalist>
+
+
+
+      <div class="form-floating  mb-3">
+        <textarea style="height: 100px;" class="form-control " id="description" placeholder="Description"> </textarea>
+        <label for="description">Description</label>
+      </div>
+
+
+      <button  onclick="addProduct()" type="button" id="btnAdd"  class="btn btn-primary">Add Product</button>
+      <button  onclick="updateProduct()" type="button" id="btnUpdate" class="btn btn-success d-none ">update Product</button>
+
+   </div>
+
+   <div class="container py-5">
+    <input type="search" id="searchProduct" oninput="searchPro()" placeholder="search......" class="w-75 m-auto my-5 form-control shadow">
+
+    
+       <table class="table-bordered text-center w-100 bg-dark text-white">
+        <thead>
+          <th>Index</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Category</th>
+          <th>Description</th>
+        </thead>
+        <tbody id="data">
+        </tbody>
+       </table>
+         
+        
+      </div>
+  
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
